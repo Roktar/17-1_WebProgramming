@@ -1,0 +1,126 @@
+﻿<!DOCTYPE HTML>
+<html>
+ <head>
+  <title> Register </title>
+<script>
+<!--
+
+function func1() {
+	var id=sup.id.value;
+	
+	if(sup.id.value=="")
+		alert("아이디가 입력되지않았습니다.");
+	else if(sup.id.value.length<3)
+		alert("아이디는 최소 3글자 이상부터 사용가능합니다.");
+	else {
+		document.sup.method="post";
+                document.sup.action="signup.php";
+                document.sup.submit();
+        }		
+}
+
+function pw_check()
+{
+	var pw_1=sup.pass1.value , pw_2=sup.pass2.value;
+
+	if(sup.pass1.value=="" || sup.pass2.value=="")
+		alert("비밀번호가 입력되지 않았습니다.");
+		
+	else if(sup.pass1.value != sup.pass2.value)
+		alert("입력된 비밀번호가 일치하지 않습니다.");
+
+	else
+		alert("입력된 비밀번호가 일치합니다.");
+}
+
+function auto_close()
+{
+	document.sup.method="post";
+        document.sup.action="db/register.php"
+	document.sup.submit();
+}
+
+function action()
+{
+	self.close();
+}
+
+//-->
+</script>
+ </head> 
+<body class="signup" style="background-color:black; color:white;">
+
+<fieldset>
+ <legend> 회원 가입 </legend>
+
+<form name=sup>
+<table border=0>
+ <tr>
+  <td> <span>ID</span> </td>
+  <td>
+       <input id="id" name="id" type="text">
+       <input id="dup_check" type="button" value="중복체크" onclick="func1()">
+  </td>
+ </tr>
+ <tr>
+  <td>
+ <span>비밀번호</span>
+  </td>
+  <td>
+ <input id="pass1" name="pass1" type="password">
+  </td>
+ </tr>
+ <tr>
+  <td>
+ <span>비밀번호 확인</span>
+  </td>
+  <td>
+ <input id="pass2" type="password"> <input type=button value="확인하기" onclick="pw_check()">
+  </td>
+ </tr>
+ <tr>
+  <td>
+ <span>이름</span>
+  </td>
+  <td>
+ <input type="text" size="6" name="n">
+  </td>
+ </tr>
+ <tr>
+  <td>
+ <span>전화번호</span>
+  </td>
+  <td>
+ <input type="tel" name="tel1" size=1 pattern="[0-9]{2,3}" placeholder="010"> - <input type="tel" name="tel2" size=3 pattern="[0-9]{3,4}" placeholder="1234"> - <input type="tel" name="tel3" size=3 pattern="[0-9]{4} placeholder="5678"">
+  </td>
+ </tr>
+ <tr>
+  <td>
+ <span>이메일</span> 
+  </td>
+  <td>
+ <input type="email" name="mail">
+  </td>
+ </tr>
+ <tr>
+  <td>
+ <span>배경 색상</span> 
+  </td>
+  <td>
+ <input type="color">
+  </td>
+ </tr>
+</table>
+ <div>
+ <br>
+- 자기소개<br>
+ <textarea cols="30" rows="5"> 안녕하세요</textarea>
+</fieldset>
+
+ <input id="ok" type="submit" onclick="auto_close()" value="가입하기">
+ <input id="close" type="button" onclick=window.close() value="취소">
+</fieldset>
+</form> 
+
+</body>
+</html>

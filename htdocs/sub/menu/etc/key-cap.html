@@ -1,0 +1,98 @@
+﻿<!DOCTYPE HTML>
+<html>
+ <head>
+  <title> 키캡 </title>
+   <style type="text/css">
+
+		@-webkit-keyframes title {
+		0% { opacity:0; }
+		100% { opacity:1;} 
+	}
+
+	@-webkit-keyframes txt {
+		0% { opacity:0; }
+		35% { opacity:0.4; }
+		65% { opacity:0.7; }
+		80% { opcaity:0.8; }
+		100% { opacity:1; }
+		}
+
+	#title { -webkit-animation: title 3s; }
+	#txt { -webkit-animation: txt 6s; }
+
+	#title { -webkit-animation: title 3s; }
+	#txt { -webkit-animation: txt 6s; }
+
+   </style>
+
+    <script language="javascript">
+<!--
+	function add_description(id) {
+
+		var open = document.getElementById(id); // 열릴 박스의 id를 가져옴.
+
+		if(open.style.display=='none') 
+			open.style.display=''; // 접힌 걸 열기
+		else
+			open.style.display='none'; // 닫기
+	}
+
+//-->
+    </script>
+ </head>
+<body>
+<div style="color:white; font-size:30px">
+<span id="title">:: 키캡</span>
+<hr>
+</div>
+<div id="txt" style="color:white;">
+<img src="..\image/custom_key_cap.jpg" width="250px" height="200px">
+<br>
+- 키보드의 스위치마다 덮을 수 있게 만든 뚜껑. <br>
+- 키캡의 재질, 두께에 따라 누르는 느낌이 조금씩 달라진다.<br>
+<br>
+<div style="border:3px inset darkgray;">
+<ul> 
+<span style="border:2px inset silver; margin-right:63%; border-top-width:0px; border-left-width:0px; border-bottom-right-radius:5px;"> ◎ 인쇄분류 </span>
+ <font color=silver>
+<li> <span id="op1" onclick="add_description('op_box1')" style="cursor:pointer;">무각</span>
+     <div id="op_box1" style="display:none;">
+      <br><img src="..\image/non-print_key.jpg" width="300px" height="230px"><br>
+          - 아무런 인쇄가 되어있지않은 방식.
+     </div>
+</li>
+ <li> <span id="op2" onclick="add_description('op_box2')" style="cursor:pointer;">닌자(측각)</span>
+      <div id="op_box2" style="display:none;">
+      <br><img src="..\image/ninja.jpg" width="300px" height="230px"><br>
+          - 위가 아닌 측면에 인쇄된 방식.
+     </div>
+</li>
+ <li> <span id="op3" onclick="add_description('op_box3')" style="cursor:pointer;">유각</span>
+      <div id="op_box3" style="display:none;">
+      <br><img src="..\image/custom_key_cap.jpg" width="300px" height="230px"><br>
+          - 흔히볼 수 있는 위에 인쇄되어있는 방식.<br>
+      </div>
+</li>
+</font>
+</ul>
+<ul> <span style="border:2px inset silver; margin-right:63%; border-top-width:0px; border-left-width:0px; border-bottom-right-radius:5px;"> ◎ 재질분류 </span>
+  <font color=silver> 
+ <li> <span id="op4" onclick="add_description('op_box4')" style="cursor:pointer;">ABS</span>
+      <div id="op_box4" style="display:none;">
+           - 보편적인 재질. 단가가 낮다.<br>
+           - 내구성이 낮고 마모속도가 빠름.<br>
+           - 두께가 얇아 가벼운 느낌이 듬.
+      </div>
+</li>
+ <li> <span id="op5" onclick="add_description('op_box5')" style="cursor:pointer;">PBT</span>
+      <div id="op_box5" style="display:none;">
+           - 내열,내구성은 좋은 편이나 가공이 어렵고 단가가 높음.<br>
+           - 두께가 abs에 비해 두꺼워 약간 무거운 느낌이 듬.<br>
+           - 제조사에 따라 키캡만 최소 3만원 이상.(86key이하 제외)
+      </div>
+</li>
+</ul></font>
+</div>
+</div>
+</body>
+</html>

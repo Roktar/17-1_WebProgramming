@@ -1,0 +1,80 @@
+                   /* etc */
+body { margin:16px; padding:4px; font-size:0.75em; line-height:1em; background-color:black;}
+hr { clear:both; }
+img { border:none; }
+a { text-decoration: none; }
+header + a:hover { color:white; }
+ul li { float:left; list-style:none; }
+
+
+
+
+                  /* 문서 구조화 관련 */
+header { vertical-align:middle; }
+
+nav { margin:0 5 20px 0; float:left; }
+
+nav ul li { float:left; margin:0 5px; list-style:none; font-size:14px; text-align:center; }
+
+nav a { display:block; padding:5px; }
+
+footer #sns {margin:10px 20px 0 0; float:right; }
+
+aside { margin:5px; }
+
+article { margin:5px; 0 10px 0; }
+
+nav table tr td { font-family:Verdana, Geneva, sans-serif; font-size:14px; font-weight:bold; text-align:center;}
+
+nav a { text-decoration:none; color:#000000; border-style:hidden hidden solid hidden; border-color:transparent; } 
+
+footer #sns a { text-decoration:none; }
+
+
+
+
+              /* Link 색상 변경 */
+a:link { color:silver; } 
+a:visited { color:darkgray; }
+a:hover { color:white; -webkit-transition:color 1s; }
+li > a:hover:before { content:"▶"; color:white; font-weight: bold;}
+
+
+
+
+              /* 크기와 관련된 CSS */
+
+.wrap { width:760px; min-height:600px; }
+
+header { height:80px; }
+
+nav { width:700px; }
+
+nav a { height:20px; }
+
+footer { height:70px; }
+
+#login fieldset span { width: 80px; }
+
+#signup fieldset span { width: 90px; }
+
+#order table td, th{ width: 150px; height:30px; }
+
+
+
+
+             /* 클래스선택자 */
+.wrap { margin:0; margin-right:auto; margin-left:auto; text-align:left;}
+.left { float: left;}
+.right { float: right;}
+.main { border:3px solid gray; display:block;}
+
+
+
+              /* 가상 선택자 */
+#login { margin:30px; }
+#login fieldset span { display: inline-block; }
+#signup { margin:30px; }
+#signup fieldset span { display: inline-block; vertical-align:middle; }
+#signup fieldset input { vertical-align:middle; }
+#logo { color:black; font-size:48px; text-shadow:3px 3px 5px white; float:left; vertical-align:middle; margin:30px 0 0 20px; }

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE HTML>
+<html>
+ <head>
+  <link rel="stylesheet" href="..\css/bootstrap/css/bootstrap.css">
+  <title> Contact Form </title>
+ </head>
+<body style="background-color:black; color:white";>
+
+<div style="font-size:12px;">※ 본 사이트에 잘못 올려진 정보에 대한 정정요청 혹은 기타 건의사항이 있는 경우,<br> 아래의 양식에 맞춰 전송해주시면 확인 후 조치하겠습니다!</div>
+<br>
+
+<form method="post" action="db/insert.php">
+ <table border=1 class="table">
+  <caption> 입력 양식 </caption>
+  <tr>
+   <th colspan="2" style="text-align:center;"> 제  목 </th> <td colspan="2"> <input type="text" size="50" id="title" name="title" class="form-control"> </td>
+  </tr>
+  <tr>
+   <th> 이름 </th> <td> <input type="text" size="5" id="name" name="name" class="form-control"> </td> <th> 비밀번호 </th> <td> <input type="password" id="pw" name="pw" size="39%" class="form-control"> </td> 
+  </tr>
+  <tr>
+   <td colspan="4"> <textarea id="body" name="body" cols="76%" rows="10" class="form-control"></textarea> </td>
+  </tr>
+  <tr style="text-align:center;">
+   <td colspan="4" style="border:0px;"> <input type="submit" value="작성"> <input type="reset" value="취소"> </td>
+  </tr>
+ </table>
+</form>
+
+</body>
+</html>

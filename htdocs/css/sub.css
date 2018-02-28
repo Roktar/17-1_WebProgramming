@@ -1,0 +1,4 @@
+.wrap { margin:0; margin-right:auto; margin-left:auto; text-align:left;}
+div { color:white; margin-right:16px; padding-right:10px; border:3px groove silver; box-shadow:2px 2px 4px 2px silver; }
+.hid { visibility:hidden; }
+#tb { table-layout:fixed; margin-left:10px; }

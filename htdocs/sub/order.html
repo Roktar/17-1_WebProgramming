@@ -1,0 +1,62 @@
+﻿<!DOCTYPE HTML>
+<html>
+ <head>
+  <title> Order Form </title>
+ <style>
+  .txt { color:black; }
+ </style>
+ </head>
+<body style="background-color:black; color:white";>
+<h1> :: 주문 </h1>
+<br>
+
+<form method="post" action="db/insert.php">
+ <table border="">
+  <tr>
+   <td rowspan="4"> <image src="menu/image/rubber-dom.jpg" width="120" height="120"> </td>
+   <td> 품명 : 키보드 방식을 알아보자 </td>
+  </tr>
+  <tr>
+   <td> 형태 : 전자책(E-book)
+  </tr>
+  <tr>
+   <td> 금액 : KRW 2,000
+  </tr>
+  <tr>
+   <td> 수량 : <input type="number" step="1" min="0" max="5" class="txt" value="0" onchange="val()" id="count"> </td>
+  </tr>
+ </table>
+ <hr>
+ 총 금액 : <input type="text" value="0" size="6" readonly="true" class="txt" id="total">
+ <input type="button" onClick="res()" value="주문장 제출">
+</form>
+
+</body>
+</html>
+
+ <script>
+
+ function val() {
+   var price = document.getElementById("count").value;
+   var total = document.getElementById("total");
+
+   if(price < 0 && price >= 6)
+    price = 0;
+   else 
+    total.value = 2000 * price;
+  }
+
+ function res() {
+  var total = document.getElementById("total").value;
+  if(total != 0) {
+   var order = confirm("주문 금액은 " + total + "원 입니다. 정말 주문하시겠습니까?","주문 확인");
+   if(order == true) {
+    alert("주문이 접수되었습니다.");
+    location.href = "null.html";
+   } else
+    alert("주문을 취소하셨습니다.");
+  } else {
+   alert("선택된 옵션이 없습니다. 옵션을 선택해주세요.");
+  }
+ }
+ </script>

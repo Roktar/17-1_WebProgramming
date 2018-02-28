@@ -1,0 +1,56 @@
+﻿<!DOCTYPE HTML>
+<html>
+ <head>
+  <title> right log-in </title>
+   <script type="text/javascript">
+    <!--
+  function check() { 
+	var id, pw;
+
+	var id=login.identity.value; // form name. 변수명. value;
+	var pw=login.password.value; // form name. 변수명. value;
+
+	if(login.identity.value.length<3) {
+		alert("id는 최소 3글자 이상이어야합니다.");
+		login.identity.focus();
+	} else if(login.identity.value.length>7) {
+		alert("id는 7글자까지만 사용가능합니다.");
+		login.identity.focus();
+	} else {
+		document.login.target="right_log-in";
+		document.login.action="login_s.php";
+		document.login.method="post";
+                document.login.submit();
+		parent.lr.location='logout.html';
+		parent.display_area.location='null.html';
+	}
+  }
+
+  function log_button() {
+	location.href="login_s.html";
+	parent.lr.location='topright.html';
+  }
+    //-->
+    </script>
+
+ </head>
+<body>
+
+<div style="color:white; margin-right:16px; padding-right:10px; border:3px groove silver; box-shadow:2px 2px 3px 2px silver;">
+
+<form name=login>
+ <table border=0>
+  <tr>
+   <td> ID </td> <td> <input type=text size=9 name="identity" placeholder="id"> </td>
+  </tr>
+   <td> PW </td> <td> <input type=password size=9 name="password"> </td>
+  </tr>
+  <tr> 
+   <td colspan=2 align="center"> <input type=button name="log-in" value="로그인" onClick="check()"> </td>
+  </tr>
+ </table>
+</form>
+
+</div>
+
+</html>

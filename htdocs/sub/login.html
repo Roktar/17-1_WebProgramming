@@ -1,0 +1,53 @@
+﻿<!DOCTYPE HTML>
+<html>
+ <head>
+  <title> Log-in </title>
+  <script language=javascript>
+<!--
+function send()
+{
+	var id, pw;
+
+	var id=login.identity.value; // form name. 변수명. value;
+	var pw=login.password.value; // form name. 변수명. value;
+
+	if(login.identity.value.length<3) {
+		alert("id는 한글 최소 3글자, 영문 최소 6글자 이상이어야합니다.");
+		login.identity.focus();
+	} else if(login.identity.value.length>7) {
+		alert("id는 한글 7글자, 영문 14글자까지만 사용가능합니다.");
+		login.identity.focus();
+	} else {
+		document.login.target="right_log-in";
+		document.login.action="login.php";
+		document.login.method="post";
+		document.login.submit(); // input을 스크립트에서 사용 시 함수처럼 사용
+		location.href="null.html"; // 현재 아이프레임의 파일을 변경.(display_area)
+		parent.lr.location='logout.html'; // 우측 상단(lr부분)의 html 파일을 변경.
+	}
+}
+//-->
+  </script>
+ </head>
+<body class="login">
+
+<form name=login>
+<fieldset style="color:white">
+ <legend> :: 회원 로그인 </legend>
+ <table border=0>
+  <tr>
+   <td> <span>ID</span> </td>
+   <td> <input name="identity" type="text"> </td>
+  </tr>
+  <tr>
+   <td> <span>PW</span> </td>
+   <td> <input name="password" type="password"> </td> <br>
+  </tr>
+  <tr>
+   <td> <input name="login" type="submit" value="log-in" onclick="send()"> </td>
+   <td> <input name="reset" type="reset" value="취소"> </td>
+</fieldset>
+
+</form> 
+</body>
+</html>
